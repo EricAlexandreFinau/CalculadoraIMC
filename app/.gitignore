@@ -12,3 +12,6 @@ local.properties
 # Dependências e logs
 /captures/
 .DS_Store
+
+# Chaves do Firebase
+google-services.json
