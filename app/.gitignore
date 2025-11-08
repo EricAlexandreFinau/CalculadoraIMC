@@ -1,0 +1,14 @@
+# Arquivos de Build
+*.apk
+*.aab
+/build/
+
+# Configurações locais do Android Studio
+.idea/
+*.iml
+.gradle/
+local.properties
+
+# Dependências e logs
+/captures/
+.DS_Store

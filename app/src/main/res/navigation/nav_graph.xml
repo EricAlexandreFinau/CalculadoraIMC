@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/infoFragment">
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.calculadoraimc.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.calculadoraimc.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_calcularFragment"
+            app:destination="@id/calcularFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="com.example.calculadoraimc.CadastroFragment"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" >
+        <action
+            android:id="@+id/action_cadastroFragment_to_calcularFragment"
+            app:destination="@id/calcularFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calcularFragment"
+        android:name="com.example.calculadoraimc.CalcularFragment"
+        android:label="fragment_calcular"
+        tools:layout="@layout/fragment_calcular" >
+        <action
+            android:id="@+id/action_calcularFragment_to_resultadoFragment"
+            app:destination="@id/resultadoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultadoFragment"
+        android:name="com.example.calculadoraimc.ResultadoFragment"
+        android:label="fragment_resultado"
+        tools:layout="@layout/fragment_resultado" >
+
+        <action
+            android:id="@+id/action_resultadoFragment_to_calcularFragment"
+            app:destination="@id/calcularFragment" />
+
+    </fragment>
+
+</navigation>
